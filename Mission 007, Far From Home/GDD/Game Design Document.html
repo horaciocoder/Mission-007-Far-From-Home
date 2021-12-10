@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="images/Player/Blue.png"/>
+    <title>Mission 007 GDD</title>
+    <style>
+        @font-face {
+            font-family: "Mission 007 Sans";
+            src: url("fonts/Distant Galaxy.ttf");
+        }
+        ::selection {
+            color:#00FF00;
+            background-color: #000000;
+            text-shadow: 0.1em 0.2em 0.5em #FFFF00;
+        }
+        body {
+            background-color: blue;
+            font-family: "Mission 007 Sans";
+            letter-spacing: 0.1em;
+            font-size: 2em;
+            text-shadow: 0.1em 0.2em 0.5em;
+            scroll-behavior: smooth;
+        }
+        h1, h2 {
+            text-align: center;
+            color: #00FF00;
+        }
+        h3 {
+            text-align: center;
+            color: #FF0000;
+        }
+        h3::selection {
+            color:#FF0000;
+        }
+        p {
+            text-align: justify;
+            padding: 2rem;
+            text-indent: 2em;
+        }
+        #Taz {
+            position: absolute;
+            left: 7em;
+            top: 1em;
+        }
+        #Jacub {
+            position: absolute;
+            left: 1em;
+            top: 1em;
+        }
+        #Bloomy {
+            position: absolute;
+            left: 13em;
+            top: 1em;
+        }
+        #Fleena {
+            position: absolute;
+            left: 19em;
+            top: 1em;
+        }
+        #NamNam {
+            position: absolute;
+            left: 25em;
+            top: 1em;
+        }
+        .Player {
+            padding-left: 6em;
+        }
+        #trailer {
+            width: 20em;
+            height: 10em;
+            position: absolute;
+            left: 1.5em;
+            top: 52em;
+        }
+        #container {
+            width: 23em;
+            height: 13em;
+            background-color: black;
+            border-radius: 2em;
+            border: 10px solid #00FF00;
+        }
+    </style>
+</head>
+<body>
+    <img src="./images/Player/Green.png" alt="Taz" id="Taz" class="Player">
+    </img>
+    <img src="./images/Player/Blue.png" alt="Jacub" id="Jacub" class="Player"/>
+    <img src="./images/Player/Yellow.png" alt="Bloomy" id="Bloomy" class="Player"/>
+    <img src="./images/Player/Pink.png" alt="Fleena" id="Fleena" class="Player"/>
+    <img src="./images/Player/Beige.png" alt="Nam-Nam" id="NamNam" class="Player"/>
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
+    <h3>Click on the left window to play!</h3>
+    <h1>Mission 007: Far From Home</h1>
+    <p>Imagine this: a game in which the alien takes revenge against another group of aliens who disguise themselves as humans, since they sent very sophisticated spaceships to invade the Cointrick planet. So the Cointrick government has sent one of five elite alien recruits to go and defeat the aliens that attacked them in first place.</p>
+    <p>Well, all this is possible when playing Mission 007: Far From Home, made by Horacio Ruggeri Ruiz and currently owned by BOOM Games (Also by Horacio Ruggeri Ruiz). The game includes 5 different aliens that can be your elite recruit that will help you defeat the "humans", or in other words, aliens that disguise themselves as humans or even zombies! The five heroes are Taz, Fleena, Jacub, Nam-Nam, and Bloomy. Each of them drives a super high-tech UFO that shoots energy balls capable of sending the target many kilometers away. At the same time, the enemies have cannons with artificial intelligence that help them to hit the UFO. Each of the enemies has a different score to give, the zombie gives 400 points, the soldier 350, the teenage boy 300, the girl gives 250 and the adventurer gives 200 points. There are also obstacles that make the game more challenging. The player has 3 lives, but can get more in the game by colliding with a heart in the game cutscene. The player can also receive coins that help him improve his score and at the same time get coins on the coin counter. Taz, Fleena, Jacub, Bloomy and Nam-Nam are counting on you, so, are you on the challenge?</p>
+    <h2 id="trailerText">Trailer</h2>
+    <div id = "container">
+        <iframe id="trailer" src="https://www.youtube.com/embed/HUi0ECnevXU" title="Mission 007: Far From Home" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <script>
+        var videoContainer = document.getElementById("container");
+        var trailerText = document.getElementById("trailerText");
+        setInterval(()=> {
+            videoContainer.style.borderColor = changeColor();
+        }, 250);
+        setInterval(()=> {
+            trailerText.style.color = changeColor();
+        }, 100);
+        function changeColor() {
+            return "rgb(" + Math.round(Math.floor(Math.random() * 255)) + "," + Math.round(Math.floor(Math.random() * 255)) + "," + Math.round(Math.floor(Math.random() * 255)) + ")";
+        }
+    </script>
+</body>
+</html>
